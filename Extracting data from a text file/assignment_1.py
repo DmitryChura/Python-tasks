@@ -25,3 +25,11 @@ for pieces,value in counts.items():
         bigword = pieces
 
 print("most prolific committer:", bigword, ", count:", largest)
+
+"""
+Input: 
+mbox-short.txt
+
+Desired Output:
+most prolific committer: cwen@iupui.edu , count: 5
+"""
