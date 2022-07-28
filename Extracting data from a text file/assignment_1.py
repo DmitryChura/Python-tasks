@@ -30,6 +30,6 @@ print("most prolific committer:", bigword, ", count:", largest)
 Input: 
 mbox-short.txt
 
-Desired Output:
+Output:
 most prolific committer: cwen@iupui.edu , count: 5
 """
