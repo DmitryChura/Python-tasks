@@ -24,4 +24,4 @@ for pieces,value in counts.items():
         largest = value
         bigword = pieces
 
-print(bigword, largest)
+print("most prolific committer:", bigword, ", count:", largest)
