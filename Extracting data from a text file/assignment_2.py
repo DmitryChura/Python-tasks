@@ -1,5 +1,5 @@
 """
-Write a program to read through the text file (we use mbox-short.txt) and figure out the distribution by hour of the day for each of the messages.
+Write a program to read through the text file (we use mailbox.txt) and figure out the distribution by hour of the day for each of the messages.
 The program looks for 'From ' lines like "From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008".
 Once you have accumulated the counts for each hour, print out the counts, sorted by hour.
 """
@@ -25,7 +25,7 @@ for hour, value in sorted(counts.items()):
 
 """
 Input:
-mbox-short.txt
+mailbox.txt
 
 Output:
 hour: 04 count: 3
