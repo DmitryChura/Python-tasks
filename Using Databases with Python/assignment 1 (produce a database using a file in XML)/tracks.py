@@ -1,10 +1,11 @@
-import xml.etree.ElementTree as ET  #API implementation for working with XML files in Python
+import xml.etree.ElementTree as ET  # API implementation for working with XML files in Python
 import sqlite3                      #interaction with database
 
-conn = sqlite3.connect('trackdb.sqlite')  #database connection
-cur = conn.cursor()                       #create object to work with db
+conn = sqlite3.connect('tracksdb.sqlite')  #database connection
+cur = conn.cursor()                        #create object to work with db
 
-cur.executescript('''               #for perform multiple SQL operations at the same time. We create some tables
+#for perform multiple SQL operations at the same time. We create some tables through executescript
+cur.executescript('''
 DROP TABLE IF EXISTS Artist;
 DROP TABLE IF EXISTS Genre;
 DROP TABLE IF EXISTS Album;
@@ -37,13 +38,14 @@ fname = input('Enter file name: ')    #i use 'Library.xml'
 def lookup(d, key):
     found = False
     for child in d:
-        if found : return child.text
+        if found : 
+            return child.text
         if child.tag == 'key' and child.text == key :
             found = True
     return None
 
-stuff = ET.parse(fname)
-all = stuff.findall('dict/dict/dict')
+stuff = ET.parse(fname)                  #open xml file through parse()
+all = stuff.findall('dict/dict/dict')    #returns all elements from a dict/dict/dict path
 print('Dict count:', len(all))
 for entry in all:
     if ( lookup(entry, 'Track ID') is None ) : continue
