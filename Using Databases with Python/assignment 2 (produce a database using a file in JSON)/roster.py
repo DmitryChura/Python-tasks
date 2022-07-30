@@ -4,7 +4,6 @@ import sqlite3
 conn = sqlite3.connect('rosterdb.sqlite')
 cur = conn.cursor()
 
-# Do some setup
 cur.executescript('''
 DROP TABLE IF EXISTS User;
 DROP TABLE IF EXISTS Member;
@@ -25,9 +24,7 @@ CREATE TABLE Member (
 )
 ''')
 
-fname = input('Enter file name: ')
-if len(fname) < 1:
-    fname = 'roster_data_sample.json'
+fname = input('Enter file name: ') #use 'roster_data.json'
 
 str_data = open(fname).read()
 json_data = json.loads(str_data)
