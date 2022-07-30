@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET  # API implementation for working with XML files in Python
 import sqlite3                      #interaction with database
 
-conn = sqlite3.connect('tracksdb.sqlite')  #database connection
+conn = sqlite3.connect('tracksdb.sqlite')  #database connection (create database file "tracksdb.sqlite")
 cur = conn.cursor()                        #create object to work with db
 
 #for perform multiple SQL operations at the same time. We create some tables through executescript
