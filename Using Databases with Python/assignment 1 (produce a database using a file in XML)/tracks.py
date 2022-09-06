@@ -1,4 +1,4 @@
-import xml.etree.ElementTree as ET  # API implementation for working with XML files in Python
+import xml.etree.ElementTree as ET  #API implementation for working with XML files in Python
 import sqlite3                      #interaction with database
 
 conn = sqlite3.connect('tracksdb.sqlite')  #database connection (create database file "tracksdb.sqlite")
